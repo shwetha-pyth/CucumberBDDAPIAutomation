@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.24"
+}
+
+group 'com.thetestingacademy'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.0'
+
+    testImplementation 'io.cucumber:cucumber-java:7.8.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.8.0'
+    testImplementation 'io.rest-assured:rest-assured:5.2.0'
+    testImplementation 'org.json:json:20220320'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4'
+}
+
+test {
+    useJUnitPlatform()
+}
